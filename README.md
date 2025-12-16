@@ -54,20 +54,22 @@ This example is intended for:
 
 ## 📸 Screenshots
 
-<p>
-  <img src="Screenshots/menu.png" width="420" alt="Main Menu">
-  <img src="Screenshots/game.png" width="420" alt="Gameplay">
+<details>
+<p align="center">
+  <img src="Screenshots/menu.png" width="360" alt="Main Menu">
+  <img src="Screenshots/game.png" width="360" alt="Gameplay">
 </p>
 
-<p>
-  <img src="Screenshots/game_over_no_entry.png" width="420" alt="Game Over - No Entries">
-  <img src="Screenshots/game_over_entries.png" width="420" alt="Game Over - Existing Entries">
+<p align="center">
+  <img src="Screenshots/game_over_no_entry.png" width="360" alt="Game Over - No Entries">
+  <img src="Screenshots/game_over_entries.png" width="360" alt="Game Over - Existing Entries">
 </p>
 
-<p>
-  <img src="Screenshots/game_over_new_entry.png" width="420" alt="Game Over - New Score Submitted">
-  <img src="Screenshots/leaderboard.png" width="420" alt="Full Leaderboard Page">
+<p align="center">
+  <img src="Screenshots/game_over_new_entry.png" width="360" alt="Game Over - New Score Submitted">
+  <img src="Screenshots/leaderboard.png" width="360" alt="Full Leaderboard Page">
 </p>
+</details>
 
  
 ---
@@ -76,24 +78,36 @@ This example is intended for:
 
 ### 1. Create a SimpleBoards Account
 
-Go to:
-
-https://simpleboards.dev
+Go to: https://simpleboards.dev
 
 Register and open the **Dashboard**.
 
 ---
 
-### 2. Create a Leaderboard
+### 2. Get Your API Key and Leaderboard ID
 
-In the dashboard:
+After creating your leaderboard in the SimpleBoards dashboard, you need two values:
 
-1. Create a new leaderboard
-2. Copy:
-   - **Leaderboard ID**
-   - **API Key**
+- **API Key** – used to authenticate requests
+- **Leaderboard ID** – identifies which leaderboard to submit scores to
 
-You will need both.
+You can copy both directly from the dashboard.
+
+<p align="center">
+  <img src="Screenshots/simpleboards_dashboard.png" width="700" alt="SimpleBoards dashboard - create API key and leaderboard">
+</p>
+
+Once created, copy the values using the **Copy** buttons:
+
+<p align="center">
+  <img src="Screenshots/simpleboards_ids.png" width="700" alt="Copy API key and Leaderboard ID in SimpleBoards dashboard">
+</p>
+
+- Use **Copy** under **API keys** to get your API key
+- Use **Copy ID** under **Active leaderboards** to get your Leaderboard ID
+
+You will paste these values into the project in the next step.
+
 
 ---
 
