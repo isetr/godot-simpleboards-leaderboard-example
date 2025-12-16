@@ -7,6 +7,8 @@ The focus is **leaderboards, score submission, and UI flow**, not game complexit
 
 This project can be used as a **Godot leaderboard example, starter template, or reference implementation** for indie developers.
 
+Try it out: https://erst.itch.io/godot-4-leaderboard-template
+
 ---
 
 <p align="center">
