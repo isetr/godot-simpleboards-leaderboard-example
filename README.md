@@ -9,6 +9,23 @@ This project can be used as a **Godot leaderboard example, starter template, or 
 
 ---
 
+<p align="center">
+  <img src="Screenshots/menu.png" width="360" alt="Main Menu">
+  <img src="Screenshots/game.png" width="360" alt="Gameplay">
+</p>
+
+<p align="center">
+  <img src="Screenshots/game_over_no_entry.png" width="360" alt="Game Over - No Entries">
+  <img src="Screenshots/game_over_entries.png" width="360" alt="Game Over - Existing Entries">
+</p>
+
+<p align="center">
+  <img src="Screenshots/game_over_new_entry.png" width="360" alt="Game Over - New Score Submitted">
+  <img src="Screenshots/leaderboard.png" width="360" alt="Full Leaderboard Page">
+</p>
+
+---
+
 ## 🎮 Game Overview
 
 **Lane Dodge** is a top-down survival game:
@@ -49,28 +66,6 @@ This example is intended for:
 
 - **Godot Engine 4.x**
 - A **SimpleBoards account** (free tier is enough)
-
----
-
-## 📸 Screenshots
-
-<details>
-<p align="center">
-  <img src="Screenshots/menu.png" width="360" alt="Main Menu">
-  <img src="Screenshots/game.png" width="360" alt="Gameplay">
-</p>
-
-<p align="center">
-  <img src="Screenshots/game_over_no_entry.png" width="360" alt="Game Over - No Entries">
-  <img src="Screenshots/game_over_entries.png" width="360" alt="Game Over - Existing Entries">
-</p>
-
-<p align="center">
-  <img src="Screenshots/game_over_new_entry.png" width="360" alt="Game Over - New Score Submitted">
-  <img src="Screenshots/leaderboard.png" width="360" alt="Full Leaderboard Page">
-</p>
-</details>
-
  
 ---
 
