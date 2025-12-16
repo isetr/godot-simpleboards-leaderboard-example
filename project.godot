@@ -1,0 +1,33 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="LeaderboardExample"
+run/main_scene="uid://t4gv7qydnx47"
+config/features=PackedStringArray("4.5", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[dotnet]
+
+project/assembly_name="LeaderboardExample"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/simpleboards_plugin/plugin.cfg")
+
+[gui]
+
+theme/custom="uid://p5i2c5qqgd2n"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

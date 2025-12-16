@@ -1,0 +1,91 @@
+[gd_scene load_steps=8 format=3 uid="uid://c5fripqepxc1n"]
+
+[ext_resource type="PackedScene" uid="uid://dse5divxrml6h" path="res://Scenes/HUD.tscn" id="1_gl6un"]
+[ext_resource type="Script" uid="uid://bm4x6d6fen8bq" path="res://Scripts/game.gd" id="1_kldst"]
+[ext_resource type="PackedScene" uid="uid://dq4by55d5xm4x" path="res://Scenes/Player.tscn" id="2_j5yw3"]
+[ext_resource type="PackedScene" uid="uid://c4ogykgbtxjjj" path="res://Scenes/Spawner.tscn" id="3_j5yw3"]
+[ext_resource type="Texture2D" uid="uid://dsl0fddecqmkf" path="res://Assets/kenney_shape-characters/PNG/Default/shadow.png" id="5_7lihs"]
+[ext_resource type="Texture2D" uid="uid://b8u0h8c8xa8gu" path="res://Assets/kenney_shape-characters/PNG/Default/tile_center.png" id="5_b2bpf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kldst"]
+size = Vector2(1242, 172)
+
+[node name="Game" type="Node2D" node_paths=PackedStringArray("player", "spawners")]
+script = ExtResource("1_kldst")
+player = NodePath("Player")
+spawners = [NodePath("Spawners/Spawner"), NodePath("Spawners/Spawner2"), NodePath("Spawners/Spawner3")]
+
+[node name="Background" type="Node" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+z_index = -6
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.17365006, 0.46320158, 0.7590657, 1)
+
+[node name="Hud" parent="." instance=ExtResource("1_gl6un")]
+
+[node name="Player" parent="." node_paths=PackedStringArray("position_left", "position_middle", "position_right") instance=ExtResource("2_j5yw3")]
+position = Vector2(576, 460)
+position_left = NodePath("../Lanes/Left")
+position_middle = NodePath("../Lanes/Middle")
+position_right = NodePath("../Lanes/Right")
+
+[node name="Lanes" type="Node" parent="."]
+
+[node name="Left" type="Marker2D" parent="Lanes"]
+position = Vector2(376, 460)
+
+[node name="Middle" type="Marker2D" parent="Lanes"]
+position = Vector2(576, 460)
+
+[node name="Right" type="Marker2D" parent="Lanes"]
+position = Vector2(776, 460)
+
+[node name="Spawners" type="Node" parent="."]
+
+[node name="Spawner" parent="Spawners" instance=ExtResource("3_j5yw3")]
+position = Vector2(376, 0)
+
+[node name="Spawner2" parent="Spawners" instance=ExtResource("3_j5yw3")]
+position = Vector2(576, 0)
+
+[node name="Spawner3" parent="Spawners" instance=ExtResource("3_j5yw3")]
+position = Vector2(776, 0)
+
+[node name="ScoreBox" type="Area2D" parent="."]
+position = Vector2(576, 587)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScoreBox"]
+position = Vector2(0, 36)
+shape = SubResource("RectangleShape2D_kldst")
+
+[node name="Shadows" type="Node" parent="."]
+
+[node name="ShadowMiddle" type="Sprite2D" parent="Shadows"]
+z_index = 1
+position = Vector2(576, 512)
+scale = Vector2(1.8333334, 1)
+texture = ExtResource("5_7lihs")
+
+[node name="ShadowLeft" type="Sprite2D" parent="Shadows"]
+z_index = 1
+position = Vector2(376, 512)
+scale = Vector2(1.8333334, 1)
+texture = ExtResource("5_7lihs")
+
+[node name="Right" type="Sprite2D" parent="Shadows"]
+z_index = 1
+position = Vector2(776, 512)
+scale = Vector2(1.8333334, 1)
+texture = ExtResource("5_7lihs")
+
+[node name="ScoreLine" type="Node" parent="."]
+
+[node name="TileCenter" type="Sprite2D" parent="ScoreLine"]
+position = Vector2(576, 593.00006)
+scale = Vector2(16.3375, 2.275)
+texture = ExtResource("5_b2bpf")

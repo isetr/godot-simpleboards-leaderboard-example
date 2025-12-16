@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://dse5divxrml6h"]
+
+[ext_resource type="Script" uid="uid://qw37hn707pmx" path="res://Scripts/hud.gd" id="1_sd512"]
+[ext_resource type="PackedScene" uid="uid://cxo5uhwltnqc" path="res://Scenes/GameOver.tscn" id="2_jo1ms"]
+
+[node name="Hud" type="CanvasLayer" node_paths=PackedStringArray("time_value", "score_value")]
+follow_viewport_enabled = true
+script = ExtResource("1_sd512")
+time_value = NodePath("Control/MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/TimeValue")
+score_value = NodePath("Control/MarginContainer/CenterContainer/HBoxContainer/VBoxContainer2/ScoreValue")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+size_flags_horizontal = 6
+size_flags_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 12
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 684
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/CenterContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TimeTitle" type="Label" parent="Control/MarginContainer/CenterContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "Time"
+horizontal_alignment = 1
+
+[node name="TimeValue" type="Label" parent="Control/MarginContainer/CenterContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "00:00:00"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/MarginContainer/CenterContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="ScoreTitle" type="Label" parent="Control/MarginContainer/CenterContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "Score"
+horizontal_alignment = 1
+
+[node name="ScoreValue" type="Label" parent="Control/MarginContainer/CenterContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "0"
+horizontal_alignment = 1
+
+[node name="GameOver" parent="." instance=ExtResource("2_jo1ms")]
+visible = false

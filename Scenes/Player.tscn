@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://dq4by55d5xm4x"]
+
+[ext_resource type="Script" uid="uid://clmq36vb8iblt" path="res://Scripts/player.gd" id="1_5ixxa"]
+[ext_resource type="Texture2D" uid="uid://dcw78bivrols0" path="res://Assets/kenney_shape-characters/PNG/Default/yellow_body_square.png" id="1_dewec"]
+[ext_resource type="Texture2D" uid="uid://dttoytmkjcsai" path="res://Assets/kenney_shape-characters/PNG/Default/face_a.png" id="2_5ixxa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qbkls"]
+size = Vector2(78, 78)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ixxa"]
+size = Vector2(80, 80)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_5ixxa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qbkls")
+
+[node name="Body" type="Node2D" parent="."]
+
+[node name="YellowBodySquare" type="Sprite2D" parent="Body"]
+texture = ExtResource("1_dewec")
+
+[node name="Faces" type="Node2D" parent="."]
+
+[node name="Face" type="Sprite2D" parent="Faces"]
+texture = ExtResource("2_5ixxa")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("RectangleShape2D_5ixxa")

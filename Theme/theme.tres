@@ -1,0 +1,35 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://p5i2c5qqgd2n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vgfbe"]
+bg_color = Color(0.054521598, 0.23614821, 0.36343893, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpedm"]
+bg_color = Color(0.3840319, 0.71868354, 0.8976674, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5o4d0"]
+bg_color = Color(0.40637913, 0.7143137, 0.9285242, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uh52q"]
+bg_color = Color(0, 0.34549913, 0.63530636, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5x85k"]
+bg_color = Color(0.23109493, 0.51311445, 0.62500113, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xnwjk"]
+bg_color = Color(0.82572186, 0.6173127, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rirc8"]
+bg_color = Color(0.62555736, 0.46533883, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_py5uo"]
+bg_color = Color(0.17254902, 0.5058824, 0.7647059, 0.5803922)
+
+[resource]
+Button/styles/disabled = SubResource("StyleBoxFlat_vgfbe")
+Button/styles/focus = SubResource("StyleBoxFlat_jpedm")
+Button/styles/hover = SubResource("StyleBoxFlat_5o4d0")
+Button/styles/normal = SubResource("StyleBoxFlat_uh52q")
+Button/styles/pressed = SubResource("StyleBoxFlat_5x85k")
+LineEdit/styles/focus = SubResource("StyleBoxFlat_xnwjk")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_rirc8")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_py5uo")

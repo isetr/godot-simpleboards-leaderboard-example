@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://l4sr0nfudpw0"]
+
+[ext_resource type="Script" uid="uid://dt84wgrrnohn0" path="res://Scripts/leaderboard_page.gd" id="1_6k6m5"]
+[ext_resource type="PackedScene" uid="uid://bvk32yu41bvpa" path="res://Scenes/Leaderboard.tscn" id="1_obl6q"]
+[ext_resource type="Theme" uid="uid://p5i2c5qqgd2n" path="res://Theme/theme.tres" id="3_g6i3i"]
+
+[node name="LeaderboardPage" type="Node2D"]
+script = ExtResource("1_6k6m5")
+
+[node name="Background" type="Node" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+z_index = -6
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.17365006, 0.46320158, 0.7590657, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Leaderboard" parent="CanvasLayer/CenterContainer/VBoxContainer" instance=ExtResource("1_obl6q")]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_g6i3i")
+text = "Back to Main Menu"
+
+[connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

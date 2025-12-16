@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvk32yu41bvpa"]
+
+[ext_resource type="Script" uid="uid://b4bq5jqqn5lmt" path="res://Scripts/leaderboard.gd" id="1_udga5"]
+[ext_resource type="Script" uid="uid://cbwgqa5bydk6f" path="res://addons/simpleboards_plugin/SimpleBoardsApi.gd" id="1_xvobe"]
+
+[node name="Leaderboard" type="VBoxContainer" node_paths=PackedStringArray("entries_container", "warning")]
+offset_right = 260.0
+offset_bottom = 70.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+script = ExtResource("1_udga5")
+entries_container = NodePath("VBoxContainer/Entries")
+warning = NodePath("VBoxContainer/Warning")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Leaderboard"
+horizontal_alignment = 1
+
+[node name="Warning" type="Label" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "API key is not configured!"
+horizontal_alignment = 1
+
+[node name="Entries" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="SimpleBoardsApi" type="Node" parent="."]
+script = ExtResource("1_xvobe")
+metadata/_custom_type_script = "uid://cbwgqa5bydk6f"
