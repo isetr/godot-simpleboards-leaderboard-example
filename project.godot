@@ -13,7 +13,7 @@ config_version=5
 config/name="LeaderboardExample"
 run/main_scene="uid://t4gv7qydnx47"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
 
 [dotnet]
 
